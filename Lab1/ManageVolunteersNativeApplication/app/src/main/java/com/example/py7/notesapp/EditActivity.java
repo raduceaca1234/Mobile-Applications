@@ -2,13 +2,16 @@ package com.example.py7.notesapp;
 
 import android.content.ContentValues;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class EditActivity extends AppCompatActivity {
@@ -68,25 +71,33 @@ public class EditActivity extends AppCompatActivity {
         }
         switch (item.getItemId()){
             case R.id.delete_edit:
-                AlertDialog.Builder builder = new AlertDialog.Builder(EditActivity.this);
-                builder.setMessage("This note will be deleted.");
-                builder.setCancelable(true);
-                builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        helper.deleteData(id);
-                        Toast.makeText(EditActivity.this, "Deleted", Toast.LENGTH_SHORT).show();
-                        finish();
-                    }
-                });
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
-                AlertDialog alertDialog = builder.create();
-                alertDialog.show();
+                Cursor cur = helper.oneData(id);
+                cur.moveToFirst();
+
+                Intent idnotes = new Intent(EditActivity.this, DeleteActivity.class);
+                idnotes.putExtra(DBHelper.row_id, id);
+                startActivity(idnotes);
+                finish();
+
+//                AlertDialog.Builder builder = new AlertDialog.Builder(EditActivity.this);
+//                builder.setMessage("This note will be deleted.");
+//                builder.setCancelable(true);
+//                builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        helper.deleteData(id);
+//                        Toast.makeText(EditActivity.this, "Deleted", Toast.LENGTH_SHORT).show();
+//                        finish();
+//                    }
+//                });
+//                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        dialog.cancel();
+//                    }
+//                });
+//                AlertDialog alertDialog = builder.create();
+//                alertDialog.show();
         }
         return super.onOptionsItemSelected(item);
     }
