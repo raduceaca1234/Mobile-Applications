@@ -2,4 +2,4 @@
 
 ## Manage Volunteers App
 
-### First lab - Native App (for the moment in java)
+### First lab - Native App (Java & Kotlin)
