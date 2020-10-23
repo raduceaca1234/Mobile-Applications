@@ -1,0 +1,8 @@
+Manage Volunteers
+
+
+Hi, I am the representative of the Beard Brothers NGO and
+I would like an application to help me keep track of the volunteers
+in this organization. I wish I could add, delete, edit and
+see my list of volunteers. At the same time, all that interests me 
+about a volunteer are his/her name, phone number and date when he/she joined the organization.
