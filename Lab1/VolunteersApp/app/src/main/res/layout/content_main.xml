@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="7dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:lineSpacingExtra="8sp"
+            android:text="The list of volunteers"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#E45328"
+            android:textSize="18sp"
+            tools:visibility="visible" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/list_volunteers"
+                    android:layout_width="match_parent"
+                    android:layout_height="631dp"
+                    android:layout_margin="7dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:drawSelectorOnTop="true">
+
+                </ListView>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:layout_margin="10dp"-->
+<!--    android:orientation="vertical"-->
+<!--    android:textAlignment="textStart"-->
+<!--    app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+<!--    tools:context=".MainActivity"-->
+<!--    tools:showIn="@layout/activity_main">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical"-->
+<!--        tools:layout_editor_absoluteX="7dp"-->
+<!--        tools:layout_editor_absoluteY="7dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="sans-serif-black"-->
+<!--            android:lineSpacingExtra="8sp"-->
+<!--            android:text="The list of volunteers"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textAllCaps="true"-->
+<!--            android:textColor="#0A9ADA"-->
+<!--            android:textSize="18sp"-->
+<!--            tools:visibility="visible" />-->
+
+<!--        <ListView-->
+<!--            android:id="@+id/list_notes"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_margin="7dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:background="#E0E8E9"-->
+<!--            android:drawSelectorOnTop="true">-->
+
+<!--        </ListView>-->
+<!--    </LinearLayout>-->
+
+<!--</android.support.constraint.ConstraintLayout>-->
